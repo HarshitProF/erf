@@ -20,7 +20,7 @@ def handle():
         "type":messa[3],
         "leverage":messa[4].split(":")[1],
         "entry":messa[5].split(":")[1],
-        "tagets":[float(messa[7].split(":")[1]),float(messa[8].split(":")[1]),float(messa[9].split(":")[1]),float(messa[10].split(":")[1]),float(messa[11].split(":")[1]),float(messa[12].split(":")[1]),(messa[13].split(":")[1])],
+        "tagets":[float(messa[7].split(":")[1]),float(messa[8].split(":")[1]),float(messa[9].split(":")[1]),float(messa[10].split(":")[1]),float(messa[11].split(":")[1]),float(messa[12].split(":")[1]),float(messa[13].split(":")[1])],
         "stoploss": messa[15].split(":")[1]
         }
         print(data)
