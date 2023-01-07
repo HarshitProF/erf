@@ -11,7 +11,7 @@ def handle():
         json_string=request.get_data().decode('utf-8')
         
         json1=json.loads(json_string)
-        print(json1["text"])
+        print(json1)
         print(json_string['text'])
 @app.route('/')
 def welcome():
