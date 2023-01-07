@@ -12,7 +12,7 @@ def handle():
         update=Update.de_json(json_string)
         bot.process_new_updates([update])
         json1=json.loads(json_string)
-        print(json1['text'])
+        print(json1.keys())
         return "done"
 @app.route('/')
 def welcome():
