@@ -1,5 +1,4 @@
 from telebot import TeleBot
-API_KEY="8jd"
 bot=TeleBot(API_KEY)
 
 @bot.message_handler(func=lambda :True)
