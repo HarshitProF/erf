@@ -4,4 +4,5 @@ bot=TeleBot(API_KEY)
 
 @bot.message_handler(func=lambda message:True)
 def reply(message):
-    bot.send_message(message.from.id ,"hello")
+    print(message)
+    bot.send_message(message.from_user.id ,"hello")
