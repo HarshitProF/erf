@@ -12,6 +12,7 @@ def handle():
         
         json1=json.loads(json_string)
         print(json1)
+        return "done"
 @app.route('/')
 def welcome():
     return "hello,home"
