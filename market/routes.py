@@ -10,7 +10,7 @@ def handle():
         json_string=request.get_data().decode('utf-8')
         print(json_string)
         update=Update.de_json(json_string)
-        bot.process_new_update(update)
+        bot.process_new_updates(update)
         return json_string
 @app.route('/')
 def welcome():
