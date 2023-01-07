@@ -11,6 +11,7 @@ def handle():
         print(json_string)
         update=Update.de_json(json_string)
         bot.process_new_update(update)
+        return json_string
 @app.route('/')
 def welcome():
     return "hello,home"
