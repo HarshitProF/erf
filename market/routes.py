@@ -2,7 +2,6 @@ from market import app
 from flask import request
 from telebot.types import Update
 from bot import bot
-API_KEY="jsd"
 url='/'+API_KEY
 @app.route(url,methods=['POST'])
 def handle(request):
