@@ -9,7 +9,7 @@ def handle():
     if request.method=="POST":
         json_string=request.get_data().decode('utf-8')
         json1=jsonify(json_string)
-        print(json['text'])
+        print(json1['text'])
         print(json_string['text'])
 @app.route('/')
 def welcome():
