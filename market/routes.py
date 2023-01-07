@@ -12,7 +12,19 @@ def handle():
         update=Update.de_json(json_string)
         bot.process_new_updates([update])
         json1=json.loads(json_string)
-        print(json1['message']['text'])
+        message=json1['message']['text']
+        messa=message.split("\n")
+        data={
+        "dat":messa[0],
+        "pair":messa[2].split(":")[1],
+        "type":messa[3],
+        "leverage":messa[4].split(":")[1],
+        "entry":messa[5].split(":")[1],
+        "tagets":[float(messa[7].split(":")[1]),float(messa[8].split(":")[1]),float(messa[9].split(":")[1]),float(messa[10].split(":")[1]),float(messa[11].split(":")[1]),float(messa[12].split(":")[1]),(messa[13].split(":")[1])],
+        "stoploss": messa[15].split(":")[1]
+        }
+        print(data)
+        bot.send_message(message['message']['from']['id'],text="hi")
         return "done"
 @app.route('/')
 def welcome():
