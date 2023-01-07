@@ -9,7 +9,8 @@ url='/'+API_KEY
 def handle():
     if request.method=="POST":
         json_string=request.get_data().decode('utf-8')
-        
+        update=Update.de_json(json_string)
+        bot.process_new_updates([update])
         json1=json.loads(json_string)
         print(json1['text'])
         return "done"
