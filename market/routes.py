@@ -33,4 +33,5 @@ def echo_message(message):
     bot.send_message(message.from_user.id ,text=message3)
 @app.route('/')
 def welcome():
+    bot.register_message_handler(echo_message) 
     return "hello,home"
